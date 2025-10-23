@@ -1,0 +1,19 @@
+/// week07-2.cpp 像畫星星一樣
+/// 劃出超大的正方形, 數字包起來
+/// TAICA 交大基礎程式設計(C++) 期中考題 第6題
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int n; /// Part 1: Input
+    cin >> n;
+
+    for (int i=1; i<n*2; i++){ /// Part 2: output
+            for (int j=1; j<n*2; j++){
+                int  d = max(abs(i-n), abs(j-n));
+                cout << d + 1;
+            }
+            cout << endl; ///cout << "現在i是: " << i << endl; /// 樓層的概念
+    }
+} /// 2會有3層樓, 3會有5層樓, 4會有7層樓, 5會有9層樓
